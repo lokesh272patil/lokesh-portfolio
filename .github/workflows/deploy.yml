@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Ensure the workflow has permission to push (write) repository contents
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main ]
@@ -10,6 +14,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          # persist the GITHUB_TOKEN credentials so subsequent git push is authenticated
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Node (optional)
         uses: actions/setup-node@v3
@@ -19,7 +27,11 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          # prefer the built-in token; if your org restricts GITHUB_TOKEN create a PAT and store in GH_PAT
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./
           keep_files: false
+
+# If you must use a PAT instead of GITHUB_TOKEN, create a repository secret named GH_PAT and
+# replace github_token above with: ${{ secrets.GH_PAT }}
