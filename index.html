@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lokesh Patil — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <!-- custom cursor -->
+  <div id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- navigation dots (JS will populate) -->
+  <nav class="dots" aria-hidden="false"></nav>
+
+  <main class="slides">
+    <section class="slide slide-hero" data-index="0">
+      <div class="hero-inner">
+        <h1>Lokesh Onkar Patil</h1>
+        <p class="subtitle">Full-Stack Developer • Pune, India</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn ghost" href="#projects">Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-about" data-index="1">
+      <div class="container panel">
+        <h2>Professional Summary</h2>
+        <p>
+          Full-Stack Developer with experience building scalable web apps using Node.js, Angular, Java and PostgreSQL. Passionate about clean code and automation.
+        </p>
+        <h3>Technical Skills</h3>
+        <ul class="skills-grid">
+          <li>JavaScript / Node.js</li>
+          <li>Angular</li>
+          <li>PostgreSQL</li>
+          <li>Docker &amp; Kubernetes</li>
+          <li>CI/CD</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide slide-projects" data-index="2" id="projects">
+      <div class="container panel">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card tilt" data-link="https://github.com/patillokesh272/project-1">
+            <div class="card-content">
+              <h3>Inventory Management System</h3>
+              <p>Enterprise inventory app — Node.js, PostgreSQL</p>
+              <a class="card-link" href="https://github.com/patillokesh272/project-1" target="_blank">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card tilt" data-link="https://github.com/patillokesh272/project-2">
+            <div class="card-content">
+              <h3>Flaky Test Case Predictor</h3>
+              <p>ML-based flaky test predictor — Python</p>
+              <a class="card-link" href="https://github.com/patillokesh272/project-2" target="_blank">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card tilt" data-link="https://github.com/patillokesh272/project-3">
+            <div class="card-content">
+              <h3>Personal Blog Engine</h3>
+              <p>Static-site generator + Netlify-style workflow</p>
+              <a class="card-link" href="#">View →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-contact" data-index="3" id="contact">
+      <div class="container panel">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:patillokesh272@gmail.com">patillokesh272@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/patillokesh272" target="_blank">patillokesh272</a></p>
+        <p>GitHub: <a href="https://github.com/patillokesh272" target="_blank">patillokesh272</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
