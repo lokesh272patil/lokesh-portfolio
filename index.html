@@ -1,57 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lokesh Patil | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lokesh Patil — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-  <div class="container">
-    <h1>Lokesh Onkar Patil</h1>
-    <p>Full-Stack Developer | Pune, India</p>
-    <p>Email: <a href="mailto:patillokesh272@gmail.com">patillokesh272@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/patillokesh272" target="_blank">patillokesh272</a></p>
-    <p>GitHub: <a href="https://github.com/patillokesh272" target="_blank">patillokesh272</a></p>
+  <!-- custom cursor -->
+  <div id="custom-cursor" aria-hidden="true"></div>
 
-    <h2>Professional Summary</h2>
-    <p>
-      Full-Stack Developer with over 3 years of experience in building scalable enterprise applications using Node.js, Angular, Java, and PostgreSQL. Proficient in developing REST APIs, implementing CI/CD pipelines, and deploying containerized solutions using Docker and Kubernetes. Passionate about clean code, collaborative problem-solving, and leveraging AI to deliver smarter, faster, and more reliable software solutions.
-    </p>
+  <!-- navigation dots (JS will populate) -->
+  <nav class="dots" aria-hidden="false"></nav>
 
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> JavaScript, Java, Python, Shell Scripting</li>
-      <li><strong>Frameworks & Libraries:</strong> Node.js, Express.js, Angular, LoopBack.io</li>
-      <li><strong>Databases:</strong> PostgreSQL, Oracle</li>
-      <li><strong>DevOps & Tools:</strong> Docker, Kubernetes, GitHub Actions, GitLab, Postman, SonarQube</li>
-      <li><strong>Version Control:</strong> GitHub, GitLab</li>
-      <li><strong>Testing:</strong> Mocha, Unit Testing, Code Coverage</li>
-      <li><strong>Web Technologies:</strong> HTML, CSS</li>
-      <li><strong>Development Practices:</strong> Agile, Scrum, SDLC, Microservices, API Integration, CI/CD, Automation, Debugging, Documentation</li>
-      <li><strong>IDEs & Utilities:</strong> VSCode, PgAdmin, Oracle SQL Developer, JIRA, Putty, MobaXterm</li>
-    </ul>
+  <main class="slides">
+    <section class="slide slide-hero" data-index="0">
+      <div class="hero-inner">
+        <h1>Lokesh Onkar Patil</h1>
+        <p class="subtitle">Full-Stack Developer • Pune, India</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn ghost" href="#projects">Projects</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/patillokesh272/project-1" target="_blank">Inventory Management System</a></li>
-      <li><a href="https://github.com/patillokesh272/project-2" target="_blank">Flaky Test Case Predictor</a></li>
-      <!-- Add more projects as needed -->
-    </ul>
+    <section class="slide slide-about" data-index="1">
+      <div class="container panel">
+        <h2>Professional Summary</h2>
+        <p>
+          Full-Stack Developer with experience building scalable web apps using Node.js, Angular, Java and PostgreSQL. Passionate about clean code and automation.
+        </p>
+        <h3>Technical Skills</h3>
+        <ul class="skills-grid">
+          <li>JavaScript / Node.js</li>
+          <li>Angular</li>
+          <li>PostgreSQL</li>
+          <li>Docker &amp; Kubernetes</li>
+          <li>CI/CD</li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Achievements</h2>
-    <p>🏆 Top 11 Finalist – GitHub Copilot Hackathon (Infosys Finacle): Built a flaky test case predictor using Python ML with 90% accuracy.</p>
+    <section class="slide slide-projects" data-index="2" id="projects">
+      <div class="container panel">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card tilt" data-link="https://github.com/patillokesh272/project-1">
+            <div class="card-content">
+              <h3>Inventory Management System</h3>
+              <p>Enterprise inventory app — Node.js, PostgreSQL</p>
+              <a class="card-link" href="https://github.com/patillokesh272/project-1" target="_blank">View on GitHub →</a>
+            </div>
+          </article>
 
-    <h2>Certifications</h2>
-    <ul>
-      <li>Generative AI Landscape – Infosys</li>
-      <li>Extreme Programming (XP) Practices in Agile – Infosys</li>
-      <li>Introduction to Cyber Security – Infosys</li>
-    </ul>
+          <article class="card tilt" data-link="https://github.com/patillokesh272/project-2">
+            <div class="card-content">
+              <h3>Flaky Test Case Predictor</h3>
+              <p>ML-based flaky test predictor — Python</p>
+              <a class="card-link" href="https://github.com/patillokesh272/project-2" target="_blank">View on GitHub →</a>
+            </div>
+          </article>
 
-    <h2>Education</h2>
-    <p><strong>Amrutvahini College of Engineering</strong> – BE in Civil Engineering (Aug 2016 – Apr 2019)</p>
-    <p>Affiliated to Savitribai Phule Pune University</p>
-  </div>
+          <article class="card tilt" data-link="https://github.com/patillokesh272/project-3">
+            <div class="card-content">
+              <h3>Personal Blog Engine</h3>
+              <p>Static-site generator + Netlify-style workflow</p>
+              <a class="card-link" href="#">View →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-contact" data-index="3" id="contact">
+      <div class="container panel">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:patillokesh272@gmail.com">patillokesh272@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/patillokesh272" target="_blank">patillokesh272</a></p>
+        <p>GitHub: <a href="https://github.com/patillokesh272" target="_blank">patillokesh272</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
